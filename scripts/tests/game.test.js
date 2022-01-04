@@ -3,7 +3,8 @@
  */
 
  const exp = require("constants");
-const { game, newGame, showScore, addTurn } = require("../game");
+const { game, newGame, showScore, addTurn
+ } = require("../game");
 
 beforeAll(() => {
     let fs = require("fs");
