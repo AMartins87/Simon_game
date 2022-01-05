@@ -1,9 +1,9 @@
 let game = {
-score: 0,
-currentGame: [],
-playerMoves: [],
-choices: ["button1", "button2", "button3", "button4"],
-}
+    currentGame: [],
+    playerMoves: [],
+    score: 0,
+    choices: ["button1", "button2", "button3", "button4"]
+};
 
 function newGame() {
     game.currentGame = [];
@@ -19,15 +19,15 @@ function addTurn() {
     // showTurns();
 }
 
-function showScore() {
-    document.getElementById("score").innerText = game.score;
+function lightsOn(circ) {
+    document.getElementById(circ).classList.add(circ + "light");
+    setTimeout(function () {
+        document.getElementById(circ).classList.remove(circ + "light");
+    }, 400);
 }
 
-function lightsOn(circ) {
-    document.getElementById(circ).classList.add("light");
-    setTimeout(() => {
-        document.getElementById(circ).classList.remove("light");
-    }, 400);
+function showScore() {
+    document.getElementById("score").innerText = game.score;
 }
 
 module.exports = { game, newGame, showScore, addTurn, lightsOn };
